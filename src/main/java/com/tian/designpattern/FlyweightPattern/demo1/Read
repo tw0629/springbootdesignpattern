@@ -1,0 +1,13 @@
+
+
+http://www.jasongj.com/design_pattern/flyweight/
+
+FlyWeight:
+    ConcreteFlyWeight
+    UnSharedFlyWeight
+
+FlyWeightFactory(享元工厂)
+
+FlyWeightClient(客户端)
+
+

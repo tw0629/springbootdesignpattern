@@ -1,0 +1,19 @@
+
+
+最好在一些好的源码里面学习 设计模式, 这样记忆深刻。而不是直接乱看设计模式的demo,看了一会就忘了。
+例如：spring源码,tomcat源码,mybaties源码
+
+
+com/tian/designpattern/designpattern
+
+
+
+好文章链接：
+
+#http://www.jasongj.com/tags/Design-Pattern/
+
+#http://www.jasongj.com/design_pattern/observer/
+https://github.com/habren/JavaDesignPattern
+
+全一点
+https://www.runoob.com/design-pattern/chain-of-responsibility-pattern.html

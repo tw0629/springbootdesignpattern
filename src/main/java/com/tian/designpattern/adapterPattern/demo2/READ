@@ -1,0 +1,17 @@
+
+https://www.runoob.com/design-pattern/adapter-pattern.html
+
+
+AdvancedMediaPlayer:
+    VlcPlayer
+    Mp4Player
+
+MediaPlayer:
+    MediaAdapter(MediaPlayer 接口的适配器类, 调用了AdvancedMediaPlayer)
+
+    AudioPlayer(MediaPlayer 接口的实体类，调用了MediaAdapter)
+
+AdapterPatternClient:
+    直接使用AudioPlayer,其实AudioPlayer通过适配器调用的是AdvancedMediaPlayer的实现类。
+
+
