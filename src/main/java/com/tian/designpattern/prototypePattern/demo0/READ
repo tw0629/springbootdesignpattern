@@ -1,0 +1,45 @@
+
+https://www.runoob.com/design-pattern/prototype-pattern.htmloob.com/design-pattern/chain-of-responsibility-pattern.html
+https://blog.csdn.net/qq_34337272/article/details/80706444
+
+原型模式中有三个登场角色：
+1 原型角色：定义用于复制现有实例来生成新实例的方法；
+    // 以贴主示例代码为例
+    implements Cloneable   // 1.（抽象类或者接口）实现 java.lang.Cloneable 接口
+    public Shape clone();  // 2.定义复制现有实例来生成新实例的方法
+
+2 具体原型角色：实现用于复制现有实例来生成新实例的方法
+    // 实现复制现有实例来生成新实例的方法（也可以由超类完成）
+    public Shape clone() {
+        Shape clone = null;
+        try {
+            clone = (Shape) clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return clone;
+    }
+
+3 使用者角色：维护一个注册表，并提供一个找出正确实例原型的方法。
+           最后，提供一个获取新实例的方法，用来委托复制实例的方法生成新实例。
+    //维护一个注册表
+    private static Hashtable<String, Shape> shapeMap = new Hashtable<String, Shape>();
+        public static void loadCache() {
+        Circle circle = new Circle();
+        circle.setId("1");
+        shapeMap.put(circle.getId(),circle);
+
+        Square square = new Square();
+        square.setId("2");
+        shapeMap.put(square.getId(),square);
+
+        Rectangle rectangle = new Rectangle();
+        rectangle.setId("3");
+        shapeMap.put(rectangle.getId(),rectangle);
+    }
+    public static Shape getShape(String shapeId) {//提供一个获取新实例的方法
+        Shape cachedShape = shapeMap.get(shapeId);//提供一个找出正确实例原型的方法
+        return (Shape) cachedShape.clone();//委托复制实例的方法生成新实例。
+    }
+
+
