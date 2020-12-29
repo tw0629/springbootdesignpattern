@@ -1,5 +1,7 @@
 package com.tian.designpattern.singletonPattern.demo_other;
 
+import com.sun.org.apache.bcel.internal.classfile.InnerClass;
+
 /**
  * @author David Tian
  * @since 2019-07-08
@@ -17,11 +19,13 @@ public class Singleton {
 
     private Singleton() {};
 
+    private static class InnerClass {
+        private static final Singleton INSTANCE = new Singleton();
+    }
+
     public static Singleton getInstance() {
         return InnerClass.INSTANCE;
     }
 
-    private static class InnerClass {
-        private static final Singleton INSTANCE = new Singleton();
-    }
+
 }

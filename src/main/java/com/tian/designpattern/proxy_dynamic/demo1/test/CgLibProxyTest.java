@@ -5,6 +5,8 @@ import com.tian.designpattern.proxy_dynamic.demo1.subject.ConcreteSubject;
 import com.tian.designpattern.proxy_dynamic.demo1.subject.ISubject;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
+//test cglib
+
 
 /**
  * @author David Tian
@@ -22,6 +24,8 @@ public class CgLibProxyTest {
 
         ISubject subject = (ISubject)enhancer.create();
         subject.action();
+
+        System.out.println("==============>");
     }
 
 }
