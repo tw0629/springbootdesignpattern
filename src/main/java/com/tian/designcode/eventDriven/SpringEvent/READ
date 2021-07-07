@@ -1,0 +1,5 @@
+
+#springEvent事件驱动
+1 继承 implements ApplicationListener ;
+2 @EventListener
+3

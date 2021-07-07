@@ -62,7 +62,8 @@ public class DynamicProxyTest {
             Enhancer enhancer = new Enhancer();
             enhancer.setSuperclass(ConcreteSubject.class);
             enhancer.setCallback(methodInterceptor);
-            enhancer.create();
+            ISubject subject = (ISubject) enhancer.create();
+            subject.action();
         }
         long stop = System.currentTimeMillis();
         LOG.info("cglib creation time : {} ms", stop - start);

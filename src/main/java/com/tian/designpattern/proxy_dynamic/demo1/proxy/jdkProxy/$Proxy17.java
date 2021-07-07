@@ -1,4 +1,4 @@
-package com.tian.designpattern.proxy_dynamic.demo1.proxy.staticProxy;
+package com.tian.designpattern.proxy_dynamic.demo1.proxy.jdkProxy;
 
 import com.tian.designpattern.proxy_dynamic.demo1.subject.ISubject;
 

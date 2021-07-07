@@ -33,8 +33,9 @@ public class JdkDynamicProxyTest {
 
 
         //会在根目录 生成一个名叫$Proxy18 .class 文件
-        byte[] classFile = ProxyGenerator.generateProxyClass("$Proxy18", ConcreteSubject.class.getInterfaces());
-        try(OutputStream outputStream = new FileOutputStream("$Proxy18.class")){
+        byte[] classFile = ProxyGenerator.generateProxyClass("$Proxy19", ConcreteSubject.class.getInterfaces());
+        try(OutputStream outputStream = new FileOutputStream("$Proxy19.class")){
+        //try(OutputStream outputStream = new FileOutputStream("src/main/java/com/tian/designpattern/proxy_dynamic/demo1/proxy/jdkProxy/$Proxy18.class")){
             IOUtils.write(classFile, outputStream);
         }
     }
